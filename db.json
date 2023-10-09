@@ -1,5 +1,27 @@
 {
     "users":[
-        
+        {
+           "id":1,
+           "name":"Andriy",
+           "sirname":"Moskalenko",
+           "photo_url":"https://github.com/Jocutagava/marketplace/blob/main/img/man1.jpg?raw=true",
+           "ballance":1500
+        },
+
+        {
+            "id":2,
+            "name":"Maxim",
+            "sirname":"Krasniy",
+            "photo_url":"https://github.com/Jocutagava/marketplace/blob/main/img/man2.jpeg?raw=true",
+            "ballance":20000
+        },
+
+        {
+            "id":3,
+            "name":"Aleh",
+            "sirname":"Vkrugukoleg",
+            "photo_url":"https://github.com/Jocutagava/marketplace/blob/main/img/man3.jpg?raw=true",
+            "ballance":10000
+        }
     ]
 }
