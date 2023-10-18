@@ -26,12 +26,54 @@
     ],
 
     "products":[
-             {},
-             {},
-             {},
-             {},
-             {},
-             {}
+             {
+                "id": 1,
+                "name": "mavpa1",
+                "description": "Brand new and high quality.",
+                "price": 184,
+                "author_id": 1,
+                "photo_url": "img/tovar1.png"
+             },
+             {
+                "id": 2,
+                "name": "mavpa2",
+                "description": "Brand new and high quality.",
+                "price": 190,
+                "author_id": 1,
+                "photo_url": "img/tovar2.png"
+             },
+             {
+                "id": 3,
+                "name": "mavpa3",
+                "description": "Brand new and high quality.",
+                "price": 230,
+                "author_id": 2,
+                "photo_url": "img/tova3.png"
+             },
+             {
+                "id": 4,
+                "name": "mavpa4",
+                "description": "Brand new and high quality.",
+                "price": 160,
+                "author_id": 2,
+                "photo_url": "img/tovar4.png"
+             },
+             {
+                "id": 5,
+                "name": "mavpa5",
+                "description": "Brand new and high quality.",
+                "price": 1890,
+                "author_id": 3,
+                "photo_url": "img/tovar5.png"
+             },
+             {
+                "id": 6,
+                "name": "mavpa6",
+                "description": "Brand new and high quality.",
+                "price": 10000,
+                "author_id": 3,
+                "photo_url": "img/tovar6.png"
+             }
 
 
 
