@@ -32,10 +32,11 @@ xhr.onload = function(){
     `
     <h2 class="product-name">${p.name}</h2>
     <img src="${p.photo_url}" alt="" class="product-photo">
-    <p class="product-price">Price:${p.price}</p>
-    <p class="product-description">${p.description}</p>
-    <a href="">Seller profile</a>
-    <button>Buy</button>
+    <p class="product-price"><b>Price:</b>${p.price}</p>
+    <p class="product-description"><b>Description:</b>${p.description}</p>
+    <a href="user1.html?id=${p.author_id}">Seller profile</a>
+    <br>
+    <button class="but">Buy</button>
     `;
     main.append(pElem);
  })
