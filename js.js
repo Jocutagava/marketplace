@@ -16,10 +16,10 @@
 // })
 let main = document.getElementById("main");
 let productsArray = [];
-let link = 'https://my-json-server.typicode.com/Jocutagava/marketplace/db'
+let link = 'https://my-json-server.typicode.com/Jocutagava/marketplace';
 let xhr = new XMLHttpRequest();
 
-xhr.open('GET', link)
+xhr.open('GET', link + "/products");
 xhr.responseType = 'json';
 xhr.onload = function(){
  let products = xhr.response;
@@ -37,7 +37,7 @@ xhr.onload = function(){
     <a href="">Seller profile</a>
     <button>Buy</button>
     `;
-    main.append(pElem)
+    main.append(pElem);
  })
 }
 xhr.send();
