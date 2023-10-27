@@ -14,57 +14,33 @@
 //   })
    
 // })
-let main = document.getElementById("main")
+let main = document.getElementById("main");
+let productsArray = [];
 let link = 'https://my-json-server.typicode.com/Jocutagava/marketplace/db'
 let xhr = new XMLHttpRequest();
+
 xhr.open('GET', link)
 xhr.responseType = 'json';
-
 xhr.onload = function(){
-
-
-
-   draw(xhr.response)
+ let products = xhr.response;
+ main.innerHTML = null;
+ products.forEach(p => {
+    productsArray.push(p);
+    let pElem = document.createElement('div');
+    pElem.classList.add('product');
+    pElem.innerHTML = 
+    `
+    <h2 class="product-name">${p.name}</h2>
+    <img src="${p.photo_url}" alt="" class="product-photo">
+    <p class="product-price">Price:${p.price}</p>
+    <p class="product-description">${p.description}</p>
+    <a href="">Seller profile</a>
+    <button>Buy</button>
+    `;
+    main.append(pElem)
+ })
 }
 xhr.send();
 
 
 
-function draw (a){
-    main.innerHTML = 
-    `
-    <div id="product1">
-    <h2>${a.products[0].name}</h2>
-    <img src="${a.products[0].photo_url}" alt="">
-    <p><b>Price</b>:${a.products[0].price}</p>
-    <p><b>Description</b>:${a.products[0].description}</p>
-    <br>
-    <a href="">Seller profile</a>
-    <br>
-    <button id="but"><b>Buy</b></button>
-    </div>
-
-    <div id="product2"> 
-    <h2>${a.products[1].name}</h2>
-    <img src="${a.products[1].photo_url}" alt="">
-    <p><b>Price</b>:${a.products[1].price}</p>
-    <p><b>Description</b>:${a.products[1].description}</p>
-    <br>
-    <a href="">Seller profile</a>
-    <br>
-    <button id="but"><b>Buy</b></button>
-    </div>
-
-    <div id="product3">
-    <h2>${a.products[2].name}</h2>
-    <img src="${a.products[2].photo_url}" alt="">
-    <p><b>Price</b>:${a.products[2].price}</p>
-    <p><b>Description</b>:${a.products[2].description}</p>
-    <br>
-    <a href="">Seller profile</a>
-    <br>
-    <button id="but"><b>Buy</b></button>
-    </div>
-
-    `
-}

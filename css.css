@@ -28,29 +28,12 @@ h1{
     width: 40px;
 }
 #main{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
 }
-#main{
-    margin-top: 20px;
-}
-
-#product1,#product2,#product3{
+.product{
     background-color: gray;
-    margin: 10px;
     color: white;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
- a{
-    color: white;
-    margin-top: 10px;
-}
-#but{
-    width: 100%;
-    font-size: 20px;
-    margin-top: 10px;
 }

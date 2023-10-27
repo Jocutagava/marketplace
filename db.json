@@ -32,7 +32,7 @@
                 "description": "Brand new and high quality.",
                 "price": 184,
                 "author_id": 1,
-                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img/tovar1.png?raw=true"
+                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img%2015-50-30-279/tovar1.png?raw=true"
              },
              {
                 "id": 2,
@@ -40,7 +40,7 @@
                 "description": "Brand new and high quality.",
                 "price": 190,
                 "author_id": 1,
-                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img/tovar2.png?raw=true"
+                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img%2015-50-30-279/tovar2.png?raw=true"
              },
              {
                 "id": 3,
@@ -48,7 +48,7 @@
                 "description": "Brand new and high quality.",
                 "price": 230,
                 "author_id": 2,
-                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img/tovar3.png?raw=true"
+                "photo_url": "https://github.com/Jocutagava/marketplace/blob/main/img%2015-50-30-279/tovar3.png?raw=true"
              },
              {
                 "id": 4,
