@@ -9,10 +9,10 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+    margin: 20px;
 
 }
-h1{
+.h1{
     margin: 20px;
 }
 .button{
@@ -65,7 +65,55 @@ img{
     border-radius: 8px;
     background-color: white;
 }
-
+.visitka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: coral;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 60%;
+}
+.profPicture{
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 20px;
+}
+.visitkName{
+    margin: 0px;
+}
+.seller-products{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    width: 300px;
+}
+#prod{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: coral;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 900px;
+    padding: 10px;
+}
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.prod-name{
+    
+}
 
 @media (max-width: 1245px){
     #main{
