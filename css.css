@@ -12,6 +12,9 @@ header{
     margin: 20px;
 
 }
+.cart{
+    position: relative;
+}
 .h1{
     margin: 20px;
 }
@@ -23,9 +26,10 @@ header{
     margin: 20px;
 }
 #cartlogo{
-    margin: 4px;
-    height: 40px;
-    width: 40px;
+   
+    height: 32px;
+    width: 32px;
+    
 }
 #main{
     display: grid;
@@ -111,8 +115,27 @@ img{
     justify-content: center;
     
 }
-.prod-name{
-    
+#cart-products{
+    border: 3px solid black;
+    padding: 5px;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 5px;
+    position: absolute;
+   z-index: 1;
+   background-color: white;
+}
+#cart-products::before{
+   content: '';
+   border: transparent solid 16px;
+   border-bottom: solid #000 16px;
+   position: relative;
+   top: -2.9rem;
+   left: 1.3rem;
+   z-index: -1;
+}
+.hide{
+    display: none;
 }
 
 @media (max-width: 1245px){

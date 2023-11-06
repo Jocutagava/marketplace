@@ -14,10 +14,17 @@
 //   })
    
 // })
+let cartProducts = document.getElementById("cart-products")
+let cartButton = document.getElementById("but")
 let main = document.getElementById("main");
 let productsArray = [];
 let link = 'https://my-json-server.typicode.com/Jocutagava/marketplace';
 let xhr = new XMLHttpRequest();
+
+
+function cartClick(){
+    cartProducts.classList.toggle("hide");
+}
 
 xhr.open('GET', link + "/products");
 xhr.responseType = 'json';
@@ -42,6 +49,9 @@ xhr.onload = function(){
  })
 }
 xhr.send();
+
+
+
 
 
 
