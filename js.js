@@ -90,12 +90,15 @@ function drawCart(){
 }
 
 
-function buyAll(){
-    cartProducts.innerHTML = null;
-    cartProducts.innerHTML = 
-    `
-    <p>All products were succesfull bought!</p>
-    `
-    cart = [];
-}
+
+    function buyAll() {
+
+        cart = [];
+    
+        cartProducts.innerHTML = 'Money was withdrawn from your credit card';
+    
+        localStorage.setItem("cart", '[]');
+    
+    }
+
 
