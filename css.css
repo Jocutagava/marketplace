@@ -125,17 +125,37 @@ img{
    z-index: 1;
    background-color: white;
 }
-#cart-products::before{
+.productInCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* #cart-products::before{
    content: '';
    border: transparent solid 16px;
    border-bottom: solid #000 16px;
    position: relative;
    top: -2.9rem;
    left: 1.3rem;
-   z-index: -1;
-}
+   z-index: -3;
+   height: 10px;
+} */
 .hide{
     display: none;
+}
+
+
+#cart-products img{
+    height: 50px;
+    width: 50px;
+}
+
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width: 1245px){

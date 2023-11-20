@@ -20,7 +20,11 @@ let main = document.getElementById("main");
 let productsArray = [];
 let link = 'https://my-json-server.typicode.com/Jocutagava/marketplace';
 let xhr = new XMLHttpRequest();
-
+let cart = [];
+if(localStorage.getItem("cart")){
+    cart = JSON.parse(localStorage.getItem("cart"))
+    drawCart();
+}
 
 function cartClick(){
     cartProducts.classList.toggle("hide");
@@ -43,15 +47,55 @@ xhr.onload = function(){
     <p class="product-description"><b>Description:</b>${p.description}</p>
     <a href="user1.html?id=${p.author_id}">Seller profile</a>
     <br>
-    <button class="but">Buy</button>
+    <button class="but" onclick="addProductToCart(${p.id})">Buy</button>
     `;
     main.append(pElem);
  })
 }
 xhr.send();
 
+function addProductToCart(id){
+    let product = productsArray.find(function(p){
+        return p.id == id; 
+
+    })
+    cart.push(product);
+    drawCart();
+    localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+function drawCart(){
 
 
+    if(cart.length === 0) return cartProducts.innerHTML = "cart is empty";
+    cartProducts.innerHTML = null;
+    let sum = 0;
+    cart.forEach( a => {
+      cartProducts.innerHTML +=
+       `
+
+       <div class="cartItem"><img src="${a.photo_url}" alt=""> <p>${a.name}</p>|<p>${a.price}</p></div>
+       <hr>
+       
+       `
+       sum += a.price;
 
 
+    });
+    cartProducts.innerHTML += 
+    `
+    <p> Total Price:${sum}$</p>
+    <button onclick="buyAll()"> Buy all</button>
+    `;
+}
+
+
+function buyAll(){
+    cartProducts.innerHTML = null;
+    cartProducts.innerHTML = 
+    `
+    <p>All products were succesfull bought!</p>
+    `
+    cart = [];
+}
 
